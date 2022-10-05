@@ -1,0 +1,33 @@
+.footer {
+  min-height: 80px;
+  left: 0px;
+  bottom: 0px;
+  background-color: #3D4050;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+
+  .footer_wrapper {
+    max-width: 1172px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .footer_item {
+      list-style-type: none;
+      font-family: 'Lato', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 16px;
+      display: flex;
+      align-items: center;
+      color: #FFFFFF;
+      margin-left: 20px;
+      a {
+        color: #FFFFFF;
+        text-decoration: none;
+      }
+    }
+  }
+}
