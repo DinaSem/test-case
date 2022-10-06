@@ -65,7 +65,7 @@ export const OrderForm = () => {
                         </div>
                         <div className={s.order_box_scheme_item_text}>Sed do eiusmod tempor</div>
                     </div>
-                    <div className={s.order_box_scheme_item}>
+                    <div className={s.order_box_scheme_item} >
                         <div className={s.order_box_scheme_item_circle}>
                             <svg width="39" height="27" viewBox="0 0 39 27" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
@@ -74,7 +74,7 @@ export const OrderForm = () => {
                                     fill="white"/>
                             </svg>
                         </div>
-                        <div className={s.order_box_scheme_item_text}>Excepteur sint occaecat cupidatat non proident
+                        <div className={s.order_box_scheme_item_text}>Excepteur sint occaecat
                         </div>
                     </div>
                 </div>
