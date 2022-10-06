@@ -1,9 +1,10 @@
 .order {
-  width: 100%;
-  max-height: 100vh;
-  height: 1000px;
+  max-width: 100%;
+  height: 100vh;
+  //max-height: 1000px;
   left: 0;
   top: -50.58px;
+  padding-top: 50px;
   background: rgba(16, 16, 29, 0.9);
   background-repeat: no-repeat;
   background-size: contain;
@@ -12,16 +13,16 @@
   justify-content: center;
   align-items: center;
   display: flex;
+  min-height: auto;
 
   .order_box {
     max-width: 100%;
     //height: 100vh;
     //min-height: 937px;
-
-    margin-top: 171px;
     justify-content: center;
     align-items: center;
     text-align: center;
+    min-height: auto;
 
     .order_box_text {
       text-align: center;
@@ -43,6 +44,16 @@
           color: #3E9CDC;
         }
       }
+      @media (max-width: 900px) {
+        .order_box_text_title  {
+          font-size: 30px;
+        }
+      }
+      @media (max-width: 650px) {
+        .order_box_text_title  {
+          font-size: 25px;
+        }
+      }
 
       .order_box_text_small {
         font-style: normal;
@@ -53,9 +64,13 @@
         color: #BBBBBB;
         margin-top: 30px;
       }
+      @media (max-width: 900px) {
+        .order_box_text_small  {
+          font-size: 15px;
+        }
+      }
 
     }
-
 
     .order_box_scheme {
       display: flex;
@@ -64,8 +79,7 @@
       align-items: center;
       //padding: 0;
       gap: 20px;
-      //width: 209px;
-      //height: 164.37px;
+
 
       .order_box_scheme_item {
         display: flex;
@@ -74,9 +88,10 @@
         align-items: center;
         padding: 0;
         //gap: 20px;
-        width: 209px;
-        height: 164.37px;
+        max-width: 209px;
+        max-height: 164.37px;
         //border: white 1px solid;
+
 
         .order_box_scheme_item_circle {
           width: 60px;
@@ -92,6 +107,13 @@
           align-items: center;
           display: flex;
         }
+        @media (max-width: 800px) {
+          .order_box_scheme_item_circle  {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+          }
+        }
 
         .order_box_scheme_item_text {
           font-family: 'Lato', sans-serif;
@@ -101,57 +123,89 @@
           line-height: 19px;
           text-align: center;
           color: #FFFFFF;
-          width: 189px;
-          height: 44.37px;
+          max-width: 189px;
+          max-height: 44.37px;
+
+        }
+        @media (max-width: 650px) {
+          .order_box_scheme_item_text {
+            font-size: 13px;
+          }
+        }
+      }
+      @media (max-width: 800px) {
+        .order_box_scheme_item  {
+          max-width: 100px;
+        }
+      }
+      @media (max-width: 650px) {
+        .order_box_scheme_item  {
+          max-width: 100px;
         }
       }
     }
 
+
+    @media (max-width: 685px) {
+      .order_box_scheme  {
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+    }
+
     .order_box_form {
-      width: 1172px;
-      height: 229.44px;
+      max-width: 1172px;
+      //max-height: 229.44px;
       flex-direction: row;
       align-items: center;
       padding: 10px;
       gap: 5px;
 
       .order_box_form_select {
-
         width: 300px;
         height: 38px;
         background: rgba(255, 255, 255, 0.85);
         border: 1px solid #FFFFFF;
         border-radius: 3px;
         margin: 7px;
-        font-family: 'Lato',sans-serif;
+        font-family: 'Lato', sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
         line-height: 22px;
         align-items: center;
-      option{
-        background: rgba(39, 39, 51, 0.9);
-        color:#FFFFFF;
-        height: 48px;
+
+        option {
+          background: rgba(39, 39, 51, 0.9);
+          color: #FFFFFF;
+          height: 48px;
+        }
       }
+      @media (max-width: 400px) {
+        .order_box_form_select  {
+          width: 295px;
+        }
       }
 
       .order_box_form_input {
-
         width: 300px;
         height: 38px;
         background: rgba(255, 255, 255, 0.85);
         border: 1px solid #FFFFFF;
         border-radius: 3px;
         margin: 7px;
-        font-family: 'Lato',sans-serif;
+        font-family: 'Lato', sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
         line-height: 22px;
         align-items: center;
-
         color: #272733;
+      }
+      @media (max-width: 400px) {
+        .order_box_form_input  {
+          width: 285px;
+        }
       }
 
       .order_box_form_wrapperSecondLine {
@@ -159,10 +213,11 @@
         justify-content: center;
         align-items: center;
         margin: 10px 0;
+       flex-wrap: wrap;
 
         .order_box_form_input_rangeWrapper {
           width: 628px;
-          height: 38px;
+          max-height: 38px;
           margin-right: 10px;
 
           .order_box_form_input_range_text {
@@ -178,11 +233,17 @@
           }
 
           .order_box_form_input_range {
-            width: 628px;
+            width: 100%;
             height: 13px;
           }
         }
-        .order_box_form_span{
+        @media (max-width: 1000px) {
+          .order_box_form_input_rangeWrapper  {
+            margin-bottom: 20px;
+          }
+        }
+
+        .order_box_form_span {
           position: relative;
           display: flex;
           cursor: pointer;
@@ -207,8 +268,13 @@
           line-height: 18px;
           text-transform: uppercase;
           align-items: center;
-
         }
+        @media (max-width: 400px) {
+          .order_box_form_span  {
+            width: 285px;
+          }
+        }
+
         .order_box_form_inputFile[type=file] {
           position: absolute;
           z-index: -1;
@@ -218,14 +284,16 @@
           height: 0;
         }
       }
-      .order_box_form_submitBtn{
+
+      .order_box_form_submitBtn {
         width: 325px;
         height: 48px;
         margin-top: 30px;
+        margin-bottom: 30px;
         background: #3E9CDC;
         border: 1px solid #FFFFFF;
         border-radius: 4px;
-        font-family: 'Lato',sans-serif;
+        font-family: 'Lato', sans-serif;
         font-style: normal;
         font-weight: 600;
         font-size: 15px;
@@ -235,6 +303,13 @@
         text-transform: uppercase;
         color: #FFFFFF;
       }
+      @media (max-width: 400px) {
+        .order_box_form_submitBtn  {
+          width: 295px;
+        }
+      }
     }
   }
+
+
 }

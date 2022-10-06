@@ -9,12 +9,12 @@
   color: white;
   justify-content: space-around;
   align-items: center;
-  z-index:99;
+  z-index: 99;
+
 
   .header_logo {
     left: 375.79px;
     top: 33.5px;
-    
     font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: 800;
@@ -30,10 +30,15 @@
     }
   }
 
-  .header_menu {
+  .header_hamburger {
+    display: none;
+  }
+
+  .header_menuFull {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 
     .header_menu_item {
       font-style: normal;
@@ -45,13 +50,111 @@
       list-style-type: none;
       color: #FFFFFF;
       margin-right: 60px;
-      &:hover{
+
+      &:hover {
         color: #43ABF0;
         cursor: pointer;
       }
     }
   }
+
+  @media (max-width: 750px) {
+    .header_logo {
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 33px;
+    }
+    .header_menu_item {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .header_menuFull {
+      display: none;
+    }
+    .header_hamburger{
+      display: flex;
+      @import url(https://fonts.googleapis.com/css?family=Raleway);
+      h2 {
+        vertical-align: center;
+        text-align: center;
+      }
+
+      .header_menu{
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .header_menu > li {
+        margin: 0 1rem;
+        overflow: hidden;
+      }
+
+      .menu_button_container {
+        display: none;
+        height: 100%;
+        width: 30px;
+        cursor: pointer;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .menu_toggle {
+        display: none;
+      }
+
+      .menu_button,
+      .menu_button::before,
+      .menu_button::after {
+        display: block;
+        background-color: #fff;
+        position: absolute;
+        height: 4px;
+        width: 30px;
+        transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        border-radius: 2px;
+      }
+
+      .menu_button::before {
+        content: '';
+        margin-top: -8px;
+      }
+
+      .menu_button::after {
+        content: '';
+        margin-top: 8px;
+      }
+
+      .menu_toggle:checked + .menu_button_container .menu_button::before {
+        margin-top: 0px;
+        transform: rotate(405deg);
+      }
+
+      .menu_toggle:checked + .menu_button_container .menu_button {
+        background: rgba(255, 255, 255, 0);
+      }
+
+      .menu_toggle:checked + .menu-button_container .menu_button::after {
+        margin-top: 0px;
+        transform: rotate(-405deg);
+      }
+     }
+    }
+  }
+@media (max-width: 500px) {
+  .header {
+    display: grid;
+  }
 }
+
 
 
 
