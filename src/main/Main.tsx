@@ -16,8 +16,11 @@ export const Main = () => {
                     </ul>
                 </div>
                 <div className={s.main_buttonBlock}>
-                    <button style={{marginRight:'30px'}} className={s.main_main_buttonBlock_button1}>заказать</button>
-                    <button className={s.main_main_buttonBlock_button2}>подробнее</button>
+                    <button style={{marginRight:'30px'}} className={s.main_main_buttonBlock_button1}
+                    onClick={()=>alert('Hello))')}>заказать</button>
+                    <button className={s.main_main_buttonBlock_button2}
+                            onClick={()=>alert('Have a good day!')}
+                    >подробнее</button>
                 </div>
             </div>
 
