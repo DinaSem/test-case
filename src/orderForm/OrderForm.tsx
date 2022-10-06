@@ -96,9 +96,8 @@ export const OrderForm = () => {
                                 <span>Sed ut perspiciatis, unde omnis iste natus</span>
                                 <span>35%</span>
                             </div>
-                            <input type="range" className={s.order_box_form_input_range} placeholder={'Your E-mail'}/>
+                            <input type="range"  className={s.order_box_form_input_range}/>
                         </div>
-                        {/*<input type="file" className={s.order_box_form_input} name="ПРИКРЕПИТЬ ФАЙЛ"/>*/}
                         <label className={s.order_box_form_label}>
                             <input type="file" name="file" className={s.order_box_form_inputFile}/>
                                 <span className={s.order_box_form_span}>
@@ -112,7 +111,7 @@ export const OrderForm = () => {
                     </div>
 
 
-                    <button type='submit' className={s.order_box_form_submitBtn}>отправить</button>
+                    <button type='submit' className={s.order_box_form_submitBtn} onClick={()=>{alert('Благодарим Вас за заказ')}}>отправить</button>
                 </form>
 
             </div>

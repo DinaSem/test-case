@@ -10,6 +10,7 @@
   background-size: contain;
   //opacity: 90%;
   background-image: url("../images/wordmap.png");
+  background-position: center;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -351,6 +352,7 @@
       text-align: center;
       text-transform: uppercase;
       color: #FFFFFF;
+      cursor: pointer;
       &:hover{
         background: #215377;
       }
