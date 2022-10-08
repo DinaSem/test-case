@@ -1,7 +1,13 @@
-import React from 'react';
+import React, {ChangeEvent, useState} from 'react';
 import s from './orderForm.module.scss';
 
 export const OrderForm = () => {
+    const [value, setValue]=useState<number>(50)
+
+    const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+        setValue(+e.currentTarget.value)
+    }
+
     return (
         <div className={s.order}>
             <div className={s.order_box}>
@@ -94,9 +100,9 @@ export const OrderForm = () => {
                         <div className={s.order_box_form_input_rangeWrapper}>
                             <div className={s.order_box_form_input_range_text}>
                                 <span>Sed ut perspiciatis, unde omnis iste natus</span>
-                                <span>35%</span>
+                                <span>{value}%</span>
                             </div>
-                            <input type="range"  className={s.order_box_form_input_range}/>
+                            <input type="range" value={value} onChange={onChangeHandler} className={s.order_box_form_input_range}/>
                         </div>
                         <label className={s.order_box_form_label}>
                             <input type="file" name="file" className={s.order_box_form_inputFile}/>
